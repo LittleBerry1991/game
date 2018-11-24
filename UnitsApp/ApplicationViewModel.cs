@@ -10,18 +10,27 @@ using System.Threading.Tasks;
 namespace UnitsApp
 {
     //  модель представления
-    public class ApplicationViewModel : INotifyPropertyChanged
+    public class ApplicationViewModel : INotifyPropertyChanged 
     {
-        public ObservableCollection<Unit> Units { get; set; }
+        //  игроки
+        public ObservableCollection<Unit> Player1 { get; set; }
+        public ObservableCollection<Unit> Player2 { get; set; }
 
         // конструктор класса view-model
         public ApplicationViewModel()
         {
-            Units = new ObservableCollection<Unit>
+            // инициализация игроков
+            Player1 = new ObservableCollection<Unit>
             {
-                new Unit { Type= "Archer", Count =4, ImagePath="/Images/Creature_Archer.gif"},
-                new Unit { Type= "Peasant", Count =10, ImagePath="/Images/Creature_Peasant.gif"},
-                new Unit { Type= "Swordman", Count =2, ImagePath="/Images/Creature_Swordsman.gif"}
+                new Unit { Type= "Archer", Count = Helpers.Randomize.RandomUnitSize(), ImagePath="/Images/Creature_Archer.gif"},
+                new Unit { Type= "Peasant", Count = Helpers.Randomize.RandomUnitSize(), ImagePath="/Images/Creature_Peasant.gif"},
+                new Unit { Type= "Swordman",  Count = Helpers.Randomize.RandomUnitSize() , ImagePath="/Images/Creature_Swordsman.gif"}
+            };
+            Player2 = new ObservableCollection<Unit>
+            {
+                new Unit { Type= "Archer", Count = Helpers.Randomize.RandomUnitSize(), ImagePath="/Images/Creature_Archer.gif"},
+                new Unit { Type= "Peasant", Count = Helpers.Randomize.RandomUnitSize(), ImagePath="/Images/Creature_Peasant.gif"},
+                new Unit { Type= "Swordman",  Count = Helpers.Randomize.RandomUnitSize() , ImagePath="/Images/Creature_Swordsman.gif"}
             };
         }
 

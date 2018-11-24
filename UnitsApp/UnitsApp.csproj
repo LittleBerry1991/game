@@ -67,8 +67,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ApplicationViewModel.cs" />
+    <Compile Include="Helpers\Randomize.cs" />
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="Unit.cs" />
+    <Compile Include="Models\Unit.cs" />
     <Compile Include="ViewModels\UnitViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

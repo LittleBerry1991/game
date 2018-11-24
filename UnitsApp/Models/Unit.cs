@@ -13,6 +13,7 @@ namespace UnitsApp
     {
         private string _type;
         private int _count;
+        private int _totalHP;
         private string _imagePath;
 
         public string Type
@@ -32,6 +33,16 @@ namespace UnitsApp
             {
                 _count = value;
                 OnPropertyChanged("UnitsCount");
+            }
+        }
+
+        public int TotalHP
+        {
+            get { return _totalHP; }
+            set
+            {
+                _totalHP = value;
+                OnPropertyChanged("UnitsTotalHP");
             }
         }
 
