@@ -23,6 +23,7 @@ namespace UnitsApp
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ApplicationViewModel();
         }
     }
 }
